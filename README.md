@@ -29,8 +29,8 @@ Example Handler
 
 from ernie import mod, start
 
-    def calc_add(s):
-        return s.capitalize()
+    def calc_add(a, b):
+        return a + b
     mod('calc').fun('add', calc_add)
     
     if __name__ == "__main__":
