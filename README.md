@@ -34,7 +34,7 @@ from ernie import mod, start
     mod('calc').fun('add', calc_add)
     
     if __name__ == "__main__":
-      start()
+        start()
 
 
 Contribute
