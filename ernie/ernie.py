@@ -1,7 +1,6 @@
 import inspect
 import sys
 import os
-import io
 import logging
 import bert
 import struct
@@ -71,10 +70,12 @@ class Ernie(object):
                     opy = (bert.Atom('reply'), res)
                     self.log("<- " + opy.__str__())
                     self.write_berp(output, opy)
-                except ServerError as e:
-                    opy = (bert.Atom('error'), (bert.Atom('server'), 0, type(e), e.message, ''))
-                except Exception as e:
-                    opy = (bert.Atom('error'), (bert.Atom('user'), 0, type(e), e.message, ''))
+                except ServerError, e:
+                    opy = (bert.Atom('error'), (bert.Atom('server'), 0, str(type(e)), str(e), ''))
+                    self.log("<- " + opy.__str__())
+                    self.write_berp(output, opy)
+                except Exception, e:
+                    opy = (bert.Atom('error'), (bert.Atom('user'), 0, str(type(e)), str(e), ''))
                     self.log("<- " + opy.__str__())
                     self.write_berp(output, opy)
             elif len(ipy) == 4 and ipy[0] == bert.Atom('cast'):
