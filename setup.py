@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 
 from distutils.core import setup
-import bert
+from bert import __version__ as version
 
-__version__ = bert.__version__
-
+__version__ = version
 
 setup(
     name = 'ernie',
@@ -19,5 +18,9 @@ setup(
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Topic :: Software Development :: Libraries :: Python Modules',
-    ],
+    ], 
+    install_requires = ["bert>=2.0.0"],
+	dependency_links = [
+		'http://github.com/samuel/python-bert/tarball/master#egg=bert-2.0.0'
+	]
 )
