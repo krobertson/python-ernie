@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 
 from distutils.core import setup
-from bert import __version__ as version
 
-__version__ = version
+__version__ = '1.0.0'
 
 setup(
     name = 'ernie',
