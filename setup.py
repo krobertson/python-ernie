@@ -20,7 +20,7 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
     ], 
     install_requires = ["bert>=2.0.0"],
-	dependency_links = [
-		'http://github.com/samuel/python-bert/tarball/master#egg=bert-2.0.0'
-	]
+    dependency_links = [
+        'http://github.com/samuel/python-bert/tarball/master#egg=bert-2.0.0'
+    ]
 )
