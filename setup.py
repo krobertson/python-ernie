@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 
 from distutils.core import setup
+import bert
 
-from bert import __version__ as version
+__version__ = bert.__version__
+
 
 setup(
     name = 'ernie',
-    version = version,
+    version = __version__,
     description = 'BERT-Ernie Library',
     author = 'Ken Robertson',
     author_email = 'ken@invalidlogic.com',
