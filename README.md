@@ -11,7 +11,11 @@ See the full BERT-RPC specification at [bert-rpc.org](http://bert-rpc.org).
 Installation
 ------------
 
-To install Python-Ernie, you will also need to install the Python port of BERT serializers and Erlastic.
+To install Python-Ernie, you can use pip or traditional setup.py:
+
+    $ pip install git+git://github.com/krobertson/python-ernie 
+
+pip will install all the dependencies for you which you have to do by yourself when using setup.py directly. This means you need to install the Python port of BERT serializers and Erlastic.
 
     $ git clone git://github.com/samuel/python-erlastic.git
     $ sudo python python-erlastic/setup.py install
