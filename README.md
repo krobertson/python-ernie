@@ -64,6 +64,14 @@ I'll be the first to admin I am still new to Python.  So if I am way off on best
 1. Test
 
 
+Credits
+---------
+
+* [@mojombo](https://github.com/mojombo) for BERT/Ernie
+* [@samuel](https://github.com/samuel) for python-bert
+* [@dergraf](https://github.com/dergraf) for pip compatibility
+
+
 License
 ---------
 
