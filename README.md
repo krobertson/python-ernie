@@ -67,7 +67,7 @@ I'll be the first to admin I am still new to Python.  So if I am way off on best
 License
 ---------
 
-Copyright (c) 2009 Ken Robert
+Copyright (c) 2009 Ken Robertson
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
