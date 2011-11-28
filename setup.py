@@ -20,9 +20,9 @@ setup(
     name = 'ernie',
     version = __version__,
     description = 'BERT-Ernie Library',
-    author = 'Andre Graf',
-    author_email = 'andre@dergraf.org',
-    url = 'http://github.com/dergraf/python-ernie',
+    author = 'Ken Robertson',
+    author_email = 'ken@invalidlogic.com',
+    url = 'http://github.com/krobertson/python-ernie',
     packages = ['ernie'],
     classifiers = [
         'Intended Audience :: Developers',
