@@ -4,6 +4,18 @@ import os
 import logging
 import bert
 import struct
+# For windows: Force binary mode for stdin and stdout in order to prevent
+# behind the scene conversions of '\n' to '\r\n' and 26 to EOF.
+# Sources:
+# http://erlang.org/pipermail/erlang-questions/2003-December/010976.html
+# http://www.gossamer-threads.com/lists/python/python/68639
+try:
+    import msvcrt
+    msvcrt.setmode(sys.stdin.fileno(),  os.O_BINARY) 
+    msvcrt.setmode(sys.stdout.fileno(), os.O_BINARY) 
+except Exception:
+    pass
+
 
 class Ernie(object):
     mods = {}
@@ -56,7 +68,7 @@ class Ernie(object):
         # On windows nouse_stdio is ignored by Erlang at the port creation,
         # so we cannot use file descriptor 3 and 4 for communication.
         # We must use file descriptors 0 and 1.
-        fdi, fdo = {0, 1} if os.name is 'nt' else {3, 4}
+        fdi, fdo = (0, 1) if os.name is 'nt' else (3, 4)
         input = os.fdopen(fdi)
         output = os.fdopen(fdo, "w")
 
